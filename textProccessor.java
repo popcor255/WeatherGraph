@@ -17,14 +17,10 @@ public class textProccessor extends IOException{
                 sb.append(line);
                 sb.append(System.lineSeparator());
                 try{
-                    if(isRead == false){
-                        output += line;
-                    }
-                    else{
-                        output += "\n" + line;
-                    }
-                    
                     line = br.readLine();
+                    if(line != null){
+                        output += line + "\n";
+                    }
                 }
                 catch (IOException ex){
                     System.out.println("ERROR: ISSUE WITH FILE STREAM!");
@@ -36,4 +32,5 @@ public class textProccessor extends IOException{
             System.out.println("ERROR: FILE NOT FOUND!");
         }
     }
+
 }
