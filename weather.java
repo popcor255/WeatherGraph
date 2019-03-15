@@ -2,6 +2,7 @@ import java.util.*;
 
 public class weather{
 
+    //.
     public static void main(String[] args){
         textProccessor tp = new textProccessor("weather_report.txt");
         String lines[] = tp.output.split("[\\r\\n]+");
@@ -17,6 +18,10 @@ public class weather{
             temp_loc.rel_humidity = getSubString(33, 35, lines[i]);
             temp_loc.wind = getSubString(36, 39, lines[i]);
             temp_loc.pressure = getSubString(46, 51, lines[i]);
+
+
+
+
             
             if(!names.contains(temp_loc.name)){
                 l.add(temp_loc);
